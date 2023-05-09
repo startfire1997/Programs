@@ -17,6 +17,10 @@ target("Prog4_1_1_plainRedCube")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog4_1_2_interpolatedColors")
     set_kind("binary")
@@ -25,6 +29,10 @@ target("Prog4_1_2_interpolatedColors")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog4_1_3_tumbling")
     set_kind("binary")
@@ -33,6 +41,10 @@ target("Prog4_1_3_tumbling")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog4_1_4_multipleCubes")
     set_kind("binary")
@@ -41,6 +53,10 @@ target("Prog4_1_4_multipleCubes")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog4_2_instancing")
     set_kind("binary")
@@ -49,6 +65,10 @@ target("Prog4_2_instancing")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog4_3_multipleModels")
     set_kind("binary")
@@ -57,6 +77,10 @@ target("Prog4_3_multipleModels")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog4_4_matrixStack")
     set_kind("binary")
@@ -65,6 +89,10 @@ target("Prog4_4_matrixStack")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io

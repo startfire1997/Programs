@@ -17,10 +17,14 @@ target("Prog8_1_shadowMapping")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
-    -- on_run(function (target)
-    --     os.cp("$(scriptdir)/Prog8_1_shadowMapping/*.obj",
-    --           "$(buildir)/$(os)/$(arch)/$(mode)/")
-    -- end)
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog8_2_softShadowsPCF")
     set_kind("binary")
@@ -29,10 +33,14 @@ target("Prog8_2_softShadowsPCF")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
-    -- on_run(function (target)
-    --     os.cp("$(scriptdir)/Prog8_2_softShadowsPCF/*.obj",
-    --           "$(buildir)/$(os)/$(arch)/$(mode)/")
-    -- end)
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io

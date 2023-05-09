@@ -23,5 +23,8 @@ log/
 .clang-format
 .clang_format.hook
 
+# xmake build cache
 */build/
+/build/
 */.xmake/
+.xmake/

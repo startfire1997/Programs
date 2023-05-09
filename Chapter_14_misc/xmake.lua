@@ -17,6 +17,14 @@ target("Prog14_1_fog")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog14_2_blending")
     set_kind("binary")
@@ -25,6 +33,14 @@ target("Prog14_2_blending")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog14_3_clipping")
     set_kind("binary")
@@ -33,6 +49,14 @@ target("Prog14_3_clipping")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog14_4_stripes3Dtex")
     set_kind("binary")
@@ -41,6 +65,14 @@ target("Prog14_4_stripes3Dtex")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog14_5_marble")
     set_kind("binary")
@@ -49,6 +81,14 @@ target("Prog14_5_marble")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog14_6_wood")
     set_kind("binary")
@@ -57,7 +97,14 @@ target("Prog14_6_wood")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
-
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog14_7_clouds")
     set_kind("binary")
@@ -66,6 +113,14 @@ target("Prog14_7_clouds")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog14_8_cloudsChanging")
     set_kind("binary")
@@ -74,6 +129,14 @@ target("Prog14_8_cloudsChanging")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog14_9_dissolve")
     set_kind("binary")
@@ -82,6 +145,14 @@ target("Prog14_9_dissolve")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io

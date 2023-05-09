@@ -17,6 +17,12 @@ target("Prog6_1_sphere")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog6_2_torus")
     set_kind("binary")
@@ -25,6 +31,12 @@ target("Prog6_2_torus")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog6_3_objLoaderShuttle")
     set_kind("binary")
@@ -33,9 +45,13 @@ target("Prog6_3_objLoaderShuttle")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
-    on_build(function (target)
-        os.cp("$(scriptdir)/Prog6_3_objLoaderShuttle/*.obj",
-              "$(buildir)/$(os)/$(arch)/$(mode)/")
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
     end)
 
 --

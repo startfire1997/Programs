@@ -17,6 +17,14 @@ target("Prog10_1_procBump")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog10_2_normalMapping")
     set_kind("binary")
@@ -25,6 +33,14 @@ target("Prog10_2_normalMapping")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog10_3_texturePlusNormal")
     set_kind("binary")
@@ -33,14 +49,14 @@ target("Prog10_3_texturePlusNormal")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
-
-target("Prog10_3_texturePlusNormal")
-    set_kind("binary")
-    add_files("Prog10_3_texturePlusNormal/*.cpp")
-    if is_plat("windows") then
-        add_packages("opengl", "glew", "glfw3", "soil2", "glm")
-        add_links("shell32", "User32", "Gdi32", "msvcrt")
-    end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog10_4_1_heightMappedTerrain")
     set_kind("binary")
@@ -49,6 +65,14 @@ target("Prog10_4_1_heightMappedTerrain")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 target("Prog10_4_2_sphereVertexHeightMap")
     set_kind("binary")
@@ -57,6 +81,14 @@ target("Prog10_4_2_sphereVertexHeightMap")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.glsl",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.jpg",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/*.obj",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io

@@ -17,18 +17,14 @@ target("Prog7_1_lightingADS")
         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
         add_links("shell32", "User32", "Gdi32", "msvcrt")
     end
-
--- target("Prog6_3_objLoaderShuttle")
---     set_kind("binary")
---     add_files("Prog6_3_objLoaderShuttle/*.cpp")
---     if is_plat("windows") then
---         add_packages("opengl", "glew", "glfw3", "soil2", "glm")
---         add_links("shell32", "User32", "Gdi32", "msvcrt")
---     end
---     on_build(function (target)
---         os.cp("$(scriptdir)/Prog6_3_objLoaderShuttle/*.obj",
---               "$(buildir)/$(os)/$(arch)/$(mode)/")
---     end)
+    after_build(function (target)
+        os.cp("$(scriptdir)/" .. target:name() .. "/BlinnPhongShaders",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/GouraudShaders",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+        os.cp("$(scriptdir)/" .. target:name() .. "/PhongShaders",
+            "$(buildir)/$(os)/$(arch)/$(mode)/" .. target:name() .. "/")
+    end)
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io

@@ -25,12 +25,9 @@ void display(GLFWwindow* window, double currentTime) {
 }
 
 int main(int argc, char* argv[]) {
-	std::string shaderPath = std::filesystem::current_path()
-					.parent_path().parent_path().parent_path().parent_path().string() +
-					"\\" +
-					std::filesystem::path(argv[0]).filename().stem().string() +
-					"\\";
-	Utils::setFilePath(shaderPath);
+	std::string progFilePath = std::filesystem::current_path().string() + "\\" +
+					std::filesystem::path(argv[0]).filename().stem().string() + "\\";
+	Utils::setFilePath(progFilePath);
 
 	if (!glfwInit()) { exit(EXIT_FAILURE); }
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
